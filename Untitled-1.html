@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lab 03 - CSS Structure and Properties</title>
+
+  <style>
+    /* ===== Q1 ===== */
+    .image-preview img{
+      border-style: solid;
+      border-width: 30px;
+
+      border-top-color: skyblue;
+      border-right-color: lightpink;
+      border-bottom-color: lightgreen;
+      border-left-color: #ffefd5;
+    }
+
+    /* ===== Q2 (given CSS) ===== */
+    p > span { color: red; }
+    #header span { color: pink; }
+    span { color: green; }
+    #header *:last-child { color: orange; }
+    #header span:first-child:hover { color: blue; }
+
+    /* Just to make table look neat */
+    table{
+      width: 70%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+    }
+    th, td{
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+    th{
+      background: #f5f5f5;
+    }
+    .row-title{
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Q1) Image Preview</h2>
+
+  <div class="image-preview">
+    <img src="https://cpit405.gitlab.io/images/KAU_logo.png" alt="KAU Logo">
+  </div>
+
+  <hr>
+
+  <h2>Q2) CSS Selectors & Priority</h2>
+
+  <div id="header">
+    <span class="myclass1">Every</span>
+    <span class="myclass2">one can</span>
+    <span class="myclass3">success.</span>
+  </div>
+
+  <p>
+    One machine can do the work of fifty ordinary men.
+    <span class="myclass4">No machine can do the work of one extraordinary man.</span>
+  </p>
+
+  <h3>Answer Table</h3>
+
+  <table>
+    <tr>
+      <th></th>
+      <th>color</th>
+      <th>color when mouse over</th>
+    </tr>
+
+    <tr>
+      <td class="row-title">span.myclass1</td>
+      <td>pink</td>
+      <td>blue</td>
+    </tr>
+
+    <tr>
+      <td class="row-title">span.myclass2</td>
+      <td>pink</td>
+      <td>pink</td>
+    </tr>
+
+    <tr>
+      <td class="row-title">span.myclass3</td>
+      <td>orange</td>
+      <td>orange</td>
+    </tr>
+
+    <tr>
+      <td class="row-title">span.myclass4</td>
+      <td>red</td>
+      <td>red</td>
+    </tr>
+  </table>
+
+</body>
+</html>
